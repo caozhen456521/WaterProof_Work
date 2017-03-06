@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal" >
+
+    <EditText
+        android:id="@+id/et_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:gravity="center"
+        android:hint=""
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_set_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/et_set_score"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:gravity="center"
+            android:inputType="number" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="剩余悬赏分数："
+                android:textColor="#808080" />
+
+            <TextView
+                android:id="@+id/tv_set_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="100"
+                android:textColor="#808080" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="分"
+                android:textColor="#808080" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/det_ll_sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <CheckBox
+            android:id="@+id/det_cb_man"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="男"
+            android:textColor="#3C3C3C"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/det_cb_woman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="女"
+            android:textColor="#3C3C3C"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/det_ll_have"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <CheckBox
+            android:id="@+id/det_cb_have"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="有"
+            android:textColor="#3C3C3C"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/det_cb_null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="无"
+            android:textColor="#3C3C3C"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_wheelview_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <com.qingzu.wheel.widget.WheelView
+            android:id="@+id/id_province"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </com.qingzu.wheel.widget.WheelView>
+
+        <com.qingzu.wheel.widget.WheelView
+            android:id="@+id/id_city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </com.qingzu.wheel.widget.WheelView>
+
+        <com.qingzu.wheel.widget.WheelView
+            android:id="@+id/id_district"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </com.qingzu.wheel.widget.WheelView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/det_ll_job"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <CheckBox
+            android:id="@+id/det_cb_qing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清包"
+            android:textColor="#3C3C3C"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/det_cb_da"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="大包"
+            android:textColor="#3C3C3C"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/det_cb_zong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="总承包"
+            android:textColor="#3C3C3C"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/null_rg_sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <RadioGroup
+            android:id="@+id/null_rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+        </RadioGroup>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/det_radio_sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <RadioGroup
+            android:id="@+id/det_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/radiobutton10"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/selector_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="10分"
+                android:textColor="@drawable/selector_white_gray" />
+
+            <RadioButton
+                android:id="@+id/radiobutton15"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/selector_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="15分"
+                android:textColor="@drawable/selector_white_gray" />
+
+            <RadioButton
+                android:id="@+id/radiobutton20"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/selector_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="20分"
+                android:textColor="@drawable/selector_white_gray" />
+
+            <TextView
+                android:id="@+id/det_tv_reward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:textColor="#808080" />
+
+            <EditText
+                android:id="@+id/det_et_reward"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/hui_rectangle_shape"
+                android:gravity="center"
+                android:hint="自定义分数(默认10分)"
+                android:inputType="number" />
+        </RadioGroup>
+    </ScrollView>
+
+</LinearLayout>

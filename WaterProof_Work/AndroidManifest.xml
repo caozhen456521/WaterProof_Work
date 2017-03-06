@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qingzu.waterproof_work"
+    android:versionCode="30"
+    android:versionName="2.2.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+
+    <!-- ###################声明SDK使用的相关权限###################### -->
+    <!-- 检测网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取mac地址作为用户的备用唯一标识 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取用户手机的IMEI，用来唯一的标识用户 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 缓存资源优先存入SDcard -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- QQ、QQ空间所需权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- 极光推送 配置开始 -->
+    <permission
+        android:name="com.qingzu.waterproof_work.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required -->
+    <uses-permission android:name="com.qingzu.waterproof_work.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 极光推送 配置结束 -->
+    <!-- JMessage Demo required for record audio -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application
+        android:name="com.qingzu.application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- LoginActivity   WelcomeActivity -->
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service android:name="com.amap.api.location.APSService" >
+        </service>
+        <!-- 高德地图 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="2baebef5dbd0d1e3321ee474355d7a10" >
+        </meta-data>
+
+        <activity
+            android:name=".RegistActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".TeamManageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SelectRoleActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.droid.SelectCityActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MyShareActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx9336db16646936e5" />
+            </intent-filter>
+        </activity>
+
+        <!-- 极光 Rich push 核心功能 since 2.0.6 -->
+
+
+        <!-- Required SDK 核心功能 -->
+        <!-- option since 2.0.5 可配置PushService，DaemonService,PushReceiver,AlarmReceiver的android:process参数 将JPush相关组件设置为一个独立进程 -->
+        <!-- 如：android:process=":remote" -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter android:priority="1000" >
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.qingzu.waterproof_work" />
+            </intent-filter>
+        </service>
+
+        <!-- Required -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true" >
+            <intent-filter android:priority="1000" >
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+
+                <category android:name="com.qingzu.waterproof_work" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.qingzu.waterproof_work" />
+            </intent-filter>
+        </activity>
+        <!-- Required SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+        <!-- Required SDK核心功能 -->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+
+        <!-- IM Required IM SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.im.android.helpers.IMReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter android:priority="1000" >
+                <action android:name="cn.jpush.im.android.action.IM_RESPONSE" />
+                <action android:name="cn.jpush.im.android.action.NOTIFICATION_CLICK_PROXY" />
+
+                <category android:name="com.qingzu.waterproof_work" />
+            </intent-filter>
+        </receiver>
+
+        <!-- User defined. 用户自定义的广播接收器 -->
+        <receiver
+            android:name="com.getui.demo.MyReceiver"
+            android:enabled="true" >
+            <intent-filter>
+
+                <!-- Required 用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <!-- Required 用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required 用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required 用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="com.qingzu.waterproof_work" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required. For publish channel feature -->
+        <!-- JPUSH_CHANNEL 是为了方便开发者统计APK分发渠道。 -->
+        <!-- 例如: -->
+        <!-- 发到 Google Play 的APK可以设置为 google-play; -->
+        <!-- 发到其他市场的 APK 可以设置为 xxx-market。 -->
+        <!-- 目前这个渠道统计功能的报表还未开放。 -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <!-- Required. AppKey copied from Portal -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="ddf19261b40562936a9614ad" />
+        <!-- 极光配置结束 -->
+
+
+        <!-- 百度自动更新 -->
+        <meta-data
+            android:name="BDAPPID"
+            android:value="7486940" />
+        <meta-data
+            android:name="BDAPPKEY"
+            android:value="knyYewK7M1VflyiC0V0Stl8pzy6kZFC3" />
+
+        <activity
+            android:name="com.baidu.autoupdatesdk.ConfirmDialoigActivity"
+            android:exported="false"
+            android:screenOrientation="sensor"
+            android:theme="@style/bdp_update_dialog_style_fullscreen" />
+
+        <receiver
+            android:name="com.baidu.autoupdatesdk.receiver.BDBroadcastReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.baidu.autoupdatesdk.ACTION_NEW_UPDATE" />
+                <action android:name="com.baidu.autoupdatesdk.ACTION_DOWNLOAD_COMPLETE" />
+                <action android:name="com.baidu.autoupdatesdk.ACTION_NEW_AS" />
+                <action android:name="com.baidu.autoupdatesdk.ACTION_AS_DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 友盟分享 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="566b8ffd67e58ef2030045e3" >
+        </meta-data>
+
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.UMDefault" />
+        <!-- 微信平台 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- QQ、Qzone -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".EvaluateConstructionTeamActivity"
+            android:label="@string/title_activity_evaluate_construction_team"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ServeCityActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".CertificationActivity"
+            android:label="@string/title_activity_certification"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".AddTeamMemberActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".CreateTeamActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MemberAttestationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".PointsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MyInformationActivity"
+            android:label="@string/title_activity_my_information"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MaterialRequestActivity"
+            android:label="@string/title_activity_material_request"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ConstructionPartActivity"
+            android:label="@string/title_activity_construction_part"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".RecruitDetailActivity"
+            android:label="@string/title_activity_recruit_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ProjectDetailActivity"
+            android:label="@string/title_activity_project_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".WorkerListActivity"
+            android:label="@string/title_activity_worker_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".VipCenterActivity"
+            android:label="@string/title_activity_vip_center"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".TeamMemberDetailActivity"
+            android:label="@string/title_activity_team_member_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".EvaluateBossActivity"
+            android:label="@string/title_activity_evaluate_boss"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MyConstructionTeamActivity"
+            android:label="@string/title_activity_my_construction_team"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name=".ShowMapAddressActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SearchActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SelectedPositionActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="multi_image_selector.MultiImageSelectorActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="me.multi_image_selector.view.BasePhotoPreviewActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".WantDayWorkerActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ReleaseProjectActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SelectImageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".WebViewActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".JoinConstructionTeamActivity"
+            android:label="@string/title_activity_join_construction_team"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ShowStrengthActivity"
+            android:label="@string/title_activity_show_strength"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ManageGroupActivity"
+            android:label="@string/title_activity_manage_group"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".WorkOrderActivity"
+            android:label="@string/title_activity_work_order"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".PayingMembersActivity"
+            android:label="@string/title_activity_paying_members"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ForumActivity"
+            android:label="@string/title_activity_forum"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ReleaseIssueActivity"
+            android:label="@string/title_activity_release_issue"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ForumDetailsActivity"
+            android:label="@string/title_activity_forum_details"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ForumSearchActivity"
+            android:label="@string/title_activity_forum_search"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".HelpActivity"
+            android:label="@string/title_activity_help"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name=".AllotWorkerActivity"
+            android:label="@string/title_activity_allot_worker" >
+        </activity>
+        <activity android:name=".EvaluateWorkerActivity" >
+        </activity>
+        <activity
+            android:name=".Activity"
+            android:label="@string/title_activity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SkillCertificate"
+            android:label="@string/title_activity_skill_certificate"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SkillApprove"
+            android:label="@string/title_activity_skill_approve"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ProfessionalSkillActivity"
+            android:label="@string/title_activity_professional_skill"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ConstructionDetailActivity"
+            android:label="@string/title_activity_construction_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SunEngineeringActitvty"
+            android:label="@string/title_activity_sun_engineering_actitvty"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ReleaseActivity"
+            android:label="@string/title_activity_release"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".FifthMyMessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".AuditTeamMemberActivity"
+            android:label="@string/title_activity_audit_team_member"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SelectRewardActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".CommentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name=".ProjectPushActivity"
+            android:label="@string/title_activity_project_push"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.imagedemo.ImagePagerActivity"
+            android:label="@string/title_activity_project_push"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".PrivilegeListActivity"
+            android:label="@string/title_activity_privilege_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MessageBoxActivity"
+            android:label="@string/title_activity_message_box"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MessageSettingActivity"
+            android:label="@string/title_activity_message_setting"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".DealInviteActivity"
+            android:label="@string/title_activity_deal_invite"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".InviteWorkerListActivity"
+            android:label="@string/title_activity_invite_worker_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".InviteListActivity"
+            android:label="@string/title_activity_invite_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".LoginBySmsCodeActivity"
+            android:label="@string/title_activity_login_by_sms_code"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".FillInCodeActivity"
+            android:label="@string/title_activity_fill_in_code"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".FindWorkerActivity"
+            android:label="@string/title_activity_find_worker"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".WorkerDetailActivity"
+            android:label="@string/title_activity_worker_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".PaySuccessActivity"
+            android:label="@string/title_activity_pay_success"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".PayDefeatActivity"
+            android:label="@string/title_activity_pay_defeat"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.jmessage.android.uikit.chatting.ChatActivity"
+            android:label="@string/title_activity_pay_defeat"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.jmessage.android.uikit.PickPictureTotalActivity"
+            android:label="@string/title_activity_pay_defeat"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.jmessage.android.uikit.BrowserViewPagerActivity"
+            android:label="@string/title_activity_pay_defeat"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.jmessage.android.uikit.PickPictureActivity"
+            android:label="@string/title_activity_pay_defeat"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.qingzu.waterproof_work.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+        <receiver android:name="com.qingzu.utils.tools.AppRegister" >
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

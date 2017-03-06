@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/no_confirmed_room_rl"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="#ffffff" 
+    >
+
+    <com.qingzu.uitest.view.RoundImageView
+        android:id="@+id/ltmc_iv_member_photo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="13dp"
+         />
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/ltmc_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/ltmc_iv_member_photo"
+        android:text="赵师傅 "
+        android:textColor="#3b3b3b"
+        android:textSize="15sp" />
+
+    <RatingBar
+        android:id="@+id/ltmc_rb_evaluate"
+        style="@style/MyRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/ltmc_tv_title"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="3" />
+
+    <ImageView
+        android:id="@+id/ltmc_iv_delete_member"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/refuse"
+         />
+
+    <ImageView
+        android:id="@+id/ltmc_iv_move_group"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="6dp"
+        android:layout_toLeftOf="@id/ltmc_iv_delete_member"
+        android:src="@drawable/accept"
+        />
+<View 
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#cdcdcd"
+    android:layout_alignParentBottom="true"/>
+   
+
+</RelativeLayout>

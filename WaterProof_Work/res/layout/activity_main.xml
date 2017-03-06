@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <FrameLayout
+        android:id="@+id/main_frament"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#cdcdcd" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <com.qingzu.uitest.view.IconfontView
+                    android:id="@+id/first_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    app:iconfont_ico_color="#fe9524"
+                    app:iconfont_ico_text="@string/swith_button1"
+                    app:iconfont_tx_text="首页" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/second_re"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <com.qingzu.uitest.view.IconfontView
+                    android:id="@+id/second_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    app:iconfont_ico_color="#000000"
+                    app:iconfont_ico_text="@string/swith_button2"
+                    app:iconfont_tx_text="招天工" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/third_re"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <com.qingzu.uitest.view.IconfontView
+                    android:id="@+id/third_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    app:iconfont_ico_color="#000000"
+                    app:iconfont_ico_text="@string/swith_button3"
+                    app:iconfont_tx_text="发工程" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <com.qingzu.uitest.view.IconfontView
+                    android:id="@+id/fourth_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    app:iconfont_ico_color="#000000"
+                    app:iconfont_ico_text="@string/swith_button4"
+                    app:iconfont_tx_text="订单" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <com.qingzu.uitest.view.IconfontView
+                    android:id="@+id/fifth_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    app:iconfont_ico_color="#000000"
+                    app:iconfont_ico_text="@string/swith_button5"
+                    app:iconfont_tx_text="我的" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

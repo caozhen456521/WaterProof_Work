@@ -1,0 +1,197 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5F5F5"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.qingzu.waterproof_work.EvaluateConstructionTeamActivity" >
+
+    <com.qingzu.uitest.view.MyTitleView
+        android:id="@+id/evaluate_construction_team_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:center_text="评价施工队"
+        app:left_height="30dp"
+        app:left_src="@drawable/selector_title_back"
+        app:left_width="40dp"
+        app:right_vidibility="gone" />
+    <ScrollView 
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="15dp"
+        android:background="#ffffff" >
+
+        <ImageView
+            android:id="@+id/riv_evaluate_construction_team_img"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/defaultimg" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/riv_evaluate_construction_team_img"
+            android:layout_alignTop="@id/riv_evaluate_construction_team_img"
+            android:layout_toRightOf="@id/riv_evaluate_construction_team_img"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/aect_tv_leader_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="王工长"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/certification_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/certfication" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RatingBar
+                    android:id="@+id/worker_total_assess_ratingbar"
+                    style="@style/MyRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="3"
+                    android:stepSize="1" />
+
+                <TextView
+                    android:id="@+id/worker_total_assess_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="5.0分"
+                    android:textColor="#808080" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="接单次数："
+                    android:textColor="#808080" />
+
+                <TextView
+                    android:id="@+id/jie_dan_number_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="625"
+                    android:textColor="#808080" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#ffffff"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <RatingBar
+            android:id="@+id/evaluate_worker_assess_ratingbar"
+            style="@style/MyBigRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:rating="5.0"
+            android:stepSize="1" />
+
+        <TextView
+            android:id="@+id/assess_worker1_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/evaluate_worker_assess_ratingbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="评价一下施工队的技术吧"
+            android:textColor="#3b3b3b" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_evaluate_construction_team"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:background="#ffffff" >
+
+        <EditText
+            android:id="@+id/aect_et_assess_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="11.5dp"
+            android:background="@drawable/grey_rectangle_shape"
+            android:gravity="left|top"
+            android:hint="您的评价会让工人变得更加得优秀"
+            android:inputType="textMultiLine"
+            android:minLines="4"
+            android:padding="10dp"
+            android:paddingTop="5dp"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/commit_evaluate_bt"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="11.5dp"
+        android:layout_marginRight="11.5dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/shape_rounded_blue_button"
+        android:text="提交评价"
+        android:textColor="@drawable/selector_button_font_white"
+        android:textSize="18sp" />
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    android:orientation="vertical" >
+
+    <com.qingzu.uitest.view.MyTitleView
+        android:id="@+id/professional_skill_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:center_text="专业技能"
+        app:left_height="30dp"
+        app:left_src="@drawable/selector_title_back"
+        app:left_width="40dp"
+        app:right_text="确定" />
+
+    <ListView
+        android:id="@+id/professional_skill_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:descendantFocusability="blocksDescendants"
+        android:divider="@null"
+        android:scrollbars="none" >
+    </ListView>
+
+</LinearLayout>

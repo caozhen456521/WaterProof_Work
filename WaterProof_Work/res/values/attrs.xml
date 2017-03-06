@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TitleView">
+        <attr name="left_src" format="reference" />
+        <attr name="left_text_size" format="dimension" />
+        <attr name="left_text_color" format="color" />
+        <attr name="left_text" format="string" />
+        <attr name="left_vidibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="gone" value="1" />
+        </attr>
+        <attr name="left_width" format="dimension|enum" />
+        <attr name="left_height" format="dimension|enum" />
+        <attr name="left_img_src" format="reference" />
+        <attr name="left_img_width" format="dimension|enum" />
+        <attr name="left_img_height" format="dimension|enum" />
+        <attr name="left_img_vidibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="gone" value="1" />
+        </attr>
+        <attr name="center_text_size" format="dimension" />
+        <attr name="center_text_color" format="color" />
+        <attr name="center_background" format="reference" />
+        <attr name="center_text" format="string" />
+        <attr name="center_width" format="dimension|enum" />
+        <attr name="center_height" format="dimension|enum" />
+        <attr name="right_src" format="reference" />
+        <attr name="right_text_size" format="dimension" />
+        <attr name="right_text_color" format="color" />
+        <attr name="right_text" format="string" />
+        <attr name="right_vidibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="gone" value="1" />
+        </attr>
+        <attr name="right_width" format="dimension|enum" />
+        <attr name="right_height" format="dimension|enum" />
+        <attr name="title_background" format="color" />
+    </declare-styleable>
+    <declare-styleable name="FlowLayout">
+        <attr name="horizontalSpacing" format="dimension" />
+        <attr name="verticalSpacing" format="dimension" />
+        <attr name="orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="debugDraw" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="FlowLayout_LayoutParams">
+        <attr name="layout_newLine" format="boolean" />
+        <attr name="layout_horizontalSpacing" format="dimension" />
+        <attr name="layout_verticalSpacing" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="IconfontView">
+        <attr name="iconfont_ico_size" format="dimension" />
+        <attr name="iconfont_ico_color" format="color" />
+        <attr name="iconfont_ico_text" format="string" />
+        <attr name="iconfont_tx_size" format="dimension" />
+        <attr name="iconfont_tx_color" format="color" />
+        <attr name="iconfont_tx_text" format="string" />
+    </declare-styleable>
+
+</resources>

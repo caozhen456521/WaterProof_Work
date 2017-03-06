@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/evaluate_construcyion_team_rl_room"
+    android:layout_width="match_parent"
+    android:layout_height="60dp" 
+    android:background="#ffffff">
+    
+    <com.qingzu.uitest.view.RoundImageView
+        android:layout_marginLeft="12dp"
+        android:layout_centerVertical="true"
+            android:id="@+id/riv_evaluate_construction_team_img"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/defaultimg" />
+    <TextView 
+        android:id="@+id/evaluate_construction_team_tv"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/riv_evaluate_construction_team_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="赵师傅"/>
+    <RatingBar
+        android:layout_marginLeft="50dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/evaluate_construction_team_tv"
+                    android:id="@+id/worker_total_assess_ratingbar"
+                    style="@style/MyRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="3" />
+
+</RelativeLayout>

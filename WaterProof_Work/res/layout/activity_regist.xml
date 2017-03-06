@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <com.qingzu.uitest.view.MyTitleView
+        android:id="@+id/regist_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:center_text="注册"
+        app:left_height="30dp"
+        app:left_src="@drawable/selector_title_back"
+        app:left_width="40dp"
+        app:right_vidibility="gone"
+        app:title_background="@color/title_background_black" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="95dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tx_tj_srk" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="中国+86"
+                            android:textColor="#0053a5"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/regist_et_phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tx_tj_srk"
+                        android:hint="请输入手机号码"
+                        android:inputType="phone"
+                        android:padding="10dp"
+                        android:textColorHint="#999999"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/tx_tj_srk"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tx_tj_srk" >
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="26dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/yzm" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/regist_et_auth_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入验证码"
+                    android:inputType="phone"
+                    android:padding="10dp"
+                    android:textColorHint="#999999"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="#f2f2f2" />
+
+                <Button
+                    android:id="@+id/regist_bt_get_auth_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1.5"
+                    android:background="@null"
+                    android:text="获取验证码"
+                    android:textColor="#0053a5"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="95dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tx_tj_srk" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="新密码"
+                            android:textColor="#0053a5"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/regist_et_pass_word"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tx_tj_srk"
+                        android:inputType="textPassword"
+                        android:padding="10dp"
+                        android:password="true"
+                        android:textColorHint="#999999"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/regist_bt_commit"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="11.5dp"
+                android:layout_marginRight="11.5dp"
+                android:layout_marginTop="46dp"
+                android:background="@drawable/shape_rounded_blue_button"
+                android:text="立即注册"
+                android:textColor="@drawable/selector_button_font_white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

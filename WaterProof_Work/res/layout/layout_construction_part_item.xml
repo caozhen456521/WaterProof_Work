@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/construction_part_item_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:background="@drawable/material_request_grey_rectangle_shape">
+
+        <TextView
+            android:id="@+id/construction_part_item_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="地下顶板"
+            android:textColor="#646464"
+            android:textSize="16sp"
+            android:layout_marginLeft="15dp" />
+
+        <CheckBox
+            android:id="@+id/construction_part_item_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:textColor="#000000"
+            android:layout_marginRight="10dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

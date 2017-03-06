@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/project_info_room_rl"
+    android:layout_width="match_parent"
+    android:layout_height="100dp" 
+    android:descendantFocusability= "blocksDescendants"
+    android:background="#ffffff"
+    >
+    <LinearLayout
+        android:id="@+id/project_information_ll"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <TextView 
+            android:id="@+id/project_info_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="九堡大厦，开工了"
+            android:textColor="#000000"/>
+        <TextView 
+            android:id="@+id/project_info_start_time_tv"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016-7-15开工"
+            android:textColor="#000000"/>
+        <TextView 
+            android:id="@+id/project_info_ways_tv"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="承包方式：清包"
+            android:textColor="#000000"/>
+        
+    </LinearLayout>
+    <TextView 
+        android:id="@+id/project_info_state_tv"
+        android:layout_alignBottom="@id/project_information_ll"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#e82d2d"
+        android:text="工程信息未处理"/>
+    
+    <View
+        android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cdcdcd" />
+
+</RelativeLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/join_construction_team_rl_room"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:descendantFocusability= "blocksDescendants"
+    android:background="#ffffff" >
+
+    <com.qingzu.uitest.view.RoundImageView
+        android:id="@+id/riv_join_construction_team_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="11dp"
+        android:background="@drawable/defaultimg" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/riv_join_construction_team_img"
+        android:layout_alignTop="@id/riv_join_construction_team_img"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/riv_join_construction_team_img"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:maxEms="7"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="#000000"
+                android:id="@+id/join_construction_team_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="龙虎施工队" />
+
+            <ImageView
+                android:id="@+id/join_construction_team_vip_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:background="@drawable/vip_pm" />
+
+            <RatingBar
+                android:id="@+id/join_construction_team_assess_ratingbar"
+                style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="5" />
+
+            <TextView
+                android:textColor="#000000"
+                android:id="@+id/join_construction_team_points_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="5.0分" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="接单次数：" />
+
+            <TextView
+                android:textColor="#000000"
+                android:id="@+id/join_construction_team_complete_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25" />
+
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="工人数:" />
+
+            <TextView
+                android:textColor="#000000"
+                android:id="@+id/join_construction_team_worker_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/join_construction_team_apply_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/join_grey_rectangle_shape"
+        android:padding="3dp"
+        android:text="申请加入"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="#cdcdcd" />
+
+</RelativeLayout>

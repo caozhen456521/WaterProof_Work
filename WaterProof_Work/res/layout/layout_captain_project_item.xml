@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/lcpi_room"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff" >
+
+        <ImageView
+            android:id="@+id/lcpi_iv_photo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp" />
+         <ImageView
+            android:visibility="gone"
+            android:id="@+id/no_certification_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/no_certification" />
+        
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/lcpi_iv_photo"
+            android:orientation="vertical" >
+
+            <TextView
+                 android:ellipsize="end"
+                 android:singleLine="true"
+                android:maxEms="12"
+                android:id="@+id/lcpi_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="专业防水补漏"
+                android:textColor="@color/title_background_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/lcpi_tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:maxEms="12"
+                android:singleLine="true"
+                android:textColor="@color/my_lightgray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/lcpi_tv_material"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:maxEms="12"
+                android:singleLine="true"
+                android:textColor="@color/my_lightgray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/lcpi_tv_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="开工时间:2016年7月14日"
+                android:textColor="@color/my_lightgray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/lcpi_tv_site"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:maxEms="12"
+                android:singleLine="true"
+                android:textColor="@color/my_lightgray"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/lcpi_iv_call_phone"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/call_phone" />
+        <ImageView 
+            android:visibility="gone"
+            android:id="@+id/lcpi_has_completed_img"
+             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/has_completed"/>
+
+        <TextView
+            android:id="@+id/lcpi_tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="15dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLength="8"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="0.5cm"
+            android:textColor="@color/my_lightgray" />
+    </RelativeLayout>
+
+</LinearLayout>

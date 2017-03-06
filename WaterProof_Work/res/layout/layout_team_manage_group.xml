@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff" >
+
+    <ImageView
+        android:id="@+id/ltmg_arrows"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="18dp"
+        android:src="@drawable/rigth_arrows" />
+
+    <TextView
+        android:id="@+id/ltmg_tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:text="3"
+        android:textColor="#cdcdcd" />
+
+    <ImageView
+        android:id="@+id/ltmg_iv_delete"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/trash_can"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/ltmg_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/ltmg_arrows"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxEms="6"
+        android:paddingBottom="5dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:singleLine="true"
+        android:text="xxx哈哈"
+        android:textColor="#3b3b3b"
+        android:textSize="16sp" />
+
+</RelativeLayout>

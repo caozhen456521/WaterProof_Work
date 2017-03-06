@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    android:orientation="vertical" >
+
+    <com.qingzu.uitest.view.MyTitleView
+        android:id="@+id/cff_home_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:center_height="20dp"
+        app:center_width="60dp"
+        app:left_img_src="@drawable/location"
+        app:left_text="杭州市"
+        app:left_text_size="16sp"
+        app:right_height="20dp"
+        app:right_src="@drawable/home_message2"
+        app:right_width="17dp"
+        app:title_background="#383b3d" />
+
+    <com.qingzu.custom.control.ZListView
+        android:id="@+id/cff_lv_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" />
+
+</LinearLayout>

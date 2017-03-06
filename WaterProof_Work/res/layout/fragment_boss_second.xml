@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <com.qingzu.uitest.view.MyTitleView
+        android:id="@+id/boss_second_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:center_text="招工信息"
+        app:right_text="招天工" />
+
+    <com.qingzu.custom.control.ZListView
+        android:id="@+id/lv_recruit_information"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:divider="@null"
+        android:scrollbars="none" />
+
+</LinearLayout>

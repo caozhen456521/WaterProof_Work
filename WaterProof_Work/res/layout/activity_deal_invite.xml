@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5F5F5"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.qingzu.waterproof_work.DealInviteActivity" >
+
+     <com.qingzu.uitest.view.MyTitleView
+        android:id="@+id/deal_invite_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:center_text="邀请处理"
+        app:left_height="30dp"
+        app:left_src="@drawable/selector_title_back"
+        app:left_width="40dp"
+        app:right_vidibility="gone"
+        app:title_background="#383b3d" />
+     
+     
+      <com.qingzu.custom.control.ZListView
+        android:id="@+id/deal_invite_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" />
+     
+
+</LinearLayout>

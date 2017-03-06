@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/project_push_room_rl"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="#ffffff"
+    android:descendantFocusability="blocksDescendants" >
+
+    <LinearLayout
+        android:id="@+id/project_push_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/project_push_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="九堡大厦，开工了"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/project_push_start_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="2016-7-15开工"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/project_push_ways_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="承包方式：清包"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/project_push_ll"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical" >
+        
+        
+        <LinearLayout
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp" >
+            
+            
+              <Button
+                  android:layout_marginRight="15dp"
+            android:id="@+id/pro_push_call_phone"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:background="@drawable/call_phone" />
+              
+              <Button 
+                  android:id="@+id/pro_push_chat_bt"
+                  android:layout_width="37dp"
+                  android:layout_height="37dp"
+                  android:background="@drawable/click_chat"/>
+            
+        </LinearLayout>
+        
+       
+        
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+             android:visibility="gone"
+            android:id="@+id/completed_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/recruit_information_rectangle_shape"
+            android:padding="5dp"
+            android:text="已接单"
+            android:textSize="12sp" />
+           <Button
+               android:visibility="gone"
+            android:id="@+id/no_completed_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/recruit_information_rectangle_shape"
+            android:padding="5dp"
+            android:text="未谈成"
+            android:textSize="12sp" />
+         
+
+        <Button
+            android:visibility="visible"
+            android:id="@+id/accept_project_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/recruit_information_rectangle_shape"
+            android:padding="5dp"
+            android:text="接受工程"
+            android:textSize="12sp" />
+
+        <Button
+            android:visibility="visible"
+            android:id="@+id/refuse_project_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/recruit_information_rectangle_shape"
+            android:padding="5dp"
+            android:text="取消订单"
+            android:textSize="12sp" />
+            
+        </LinearLayout>
+         
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#f8f8f8" />
+
+</RelativeLayout>

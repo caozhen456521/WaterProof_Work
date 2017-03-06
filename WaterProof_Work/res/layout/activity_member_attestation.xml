@@ -1,0 +1,132 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".MemberAttestationActivity" >
+
+    <com.qingzu.uitest.view.MyTitleView
+        android:id="@+id/ama_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:center_text="实名认证"
+        app:left_height="30dp"
+        app:left_src="@drawable/selector_title_back"
+        app:left_width="40dp"
+        app:right_text="确定"
+        app:title_background="@color/title_background_blue" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp" >
+
+                <TextView
+                    android:id="@+id/ama_tv_id_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="身份证号"
+                    android:textColor="#3b3b3b" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/ama_tv_id_number"
+                    android:background="#eae6e7" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/ama_et_id_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:maxLength="18"
+                android:singleLine="true"
+                android:background="@drawable/shape_rectangle_gray"
+                android:hint="请输入证件号码"
+                android:padding="15dp"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/ama_tv_front"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="手持身份证正面照"
+                    android:textColor="#3b3b3b" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/ama_tv_front"
+                    android:background="#eae6e7" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ama_iv_front"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                 android:scaleType="centerCrop"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/photograph" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/ama_tv_reverse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="手持身份证反面照"
+                    android:textColor="#3b3b3b" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/ama_tv_reverse"
+                    android:background="#eae6e7" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ama_iv_reverse"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/photograph" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+     android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.qingzu.waterproof_work.SunEngineeringActitvty" >
+
+    <com.qingzu.uitest.view.MyTitleView
+        android:id="@+id/sun_engineering_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:center_text="晒工程"
+        app:left_height="30dp"
+        app:left_src="@drawable/selector_title_back"
+        app:left_width="40dp"
+        app:right_text="发布"
+        app:title_background="@color/title_background_black" />
+
+    <com.qingzu.custom.control.ZListView
+        android:id="@+id/sun_engineering_list_zlv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:divider="@null"
+        android:scrollbars="none" />
+
+</LinearLayout>

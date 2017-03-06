@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".WorkOrderActivity" >
+
+    <com.qingzu.uitest.view.MyTitleView
+        android:id="@+id/awo_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:center_text="招工详情"
+        app:left_height="30dp"
+        app:left_src="@drawable/selector_title_back"
+        app:left_width="40dp"
+        app:right_vidibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/awo_bt_all"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg_ngray"
+            android:text="全部"
+            android:textColor="@color/my_darkgray" />
+
+        <Button
+            android:id="@+id/awo_bt_wait_affirm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg_ngray"
+            android:text="待确认"
+            android:textColor="@color/my_darkgray" />
+
+        <Button
+            android:id="@+id/awo_bt_yet_affirm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg_ngray"
+            android:text="已确认"
+            android:textColor="@color/my_darkgray" />
+
+        <Button
+            android:id="@+id/awo_bt_underway"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg_ngray"
+            android:text="进行中"
+            android:textColor="@color/my_darkgray" />
+
+        <Button
+            android:id="@+id/awo_bt_wait_evaluate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg_ngray"
+            android:text="待评价"
+            android:textColor="@color/my_darkgray" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/awo_viewpage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mm_rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="@drawable/selector_my_custom" >
+
+    <TextView
+        android:id="@+id/mm_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxEms="7"
+        android:singleLine="true"
+        android:text="你好:"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/mm_img_delete_btn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/deletebtn" />
+
+    <TextView
+        android:id="@+id/mm_tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@id/mm_tv_title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="2"
+        android:text="您的工人信息认证失败!原因照片模糊,身份证信息与所填信息不符合."
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/mm_tv_info_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mm_tv_date"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/red_circle"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@id/mm_tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:text="2015年12月13日"
+        android:textColor="#cdcdcd" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_alignParentBottom="true"
+        android:background="#f5F5F5" />
+
+</RelativeLayout>

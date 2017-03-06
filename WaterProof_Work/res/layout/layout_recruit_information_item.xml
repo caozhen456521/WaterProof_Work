@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recruit_information_ll_room"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/recruit_info_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/recruit" />
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/no_certification_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/no_certification" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/recruit_info_img"
+            android:layout_alignTop="@id/recruit_info_img"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/recruit_info_img"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/recruit_info_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="卫生间防水补漏，价格面议"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/recruit_info_start_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2016-7-12开工"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="用工人数:"
+                    android:textColor="#ff0119"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/recruit_info_people_number_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="3/10"
+                    android:textColor="#ff0119"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="待确认人数:"
+                    android:textColor="#ff0119"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/recruit_info_not_confirm_number_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="20"
+                    android:textColor="#ff0119"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="12dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/recruit_info_modify_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/recruit_information_rectangle_shape"
+                android:padding="5dp"
+                android:text="修改信息"
+                android:textSize="12sp" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/recruit_info_over_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/recruit_information_rectangle_shape"
+                android:padding="5dp"
+                android:text="结束招工"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/recruit_info_completed_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/recruit_information_rectangle_shape"
+                android:padding="5dp"
+                android:text="完成招工"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#cdcdcd" />
+    </RelativeLayout>
+
+</LinearLayout>

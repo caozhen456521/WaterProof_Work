@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.qingzu.waterproof_work.PayDefeatActivity" >
+
+   
+  <com.qingzu.uitest.view.MyTitleView
+        android:id="@+id/pay_defeat_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:center_text="支付结果"
+        />
+    
+<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/pay_defeat" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:text="支付失败"
+            android:textColor="#ec2915"
+            android:textSize="18sp" />
+
+        
+      
+    </LinearLayout>
+    <Button
+        android:id="@+id/pay_defeat_completed_bt"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="11.5dp"
+        android:layout_marginRight="11.5dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/shape_rounded_blue_button"
+        android:text="完成"
+        android:textColor="@drawable/selector_button_font_white"
+        android:textSize="18sp" />
+</LinearLayout>

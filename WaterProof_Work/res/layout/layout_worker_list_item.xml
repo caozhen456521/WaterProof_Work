@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="70dp"
+    android:background="#ffffff" 
+    >
+
+    <com.qingzu.uitest.view.RoundImageView
+        android:layout_centerVertical="true"
+        android:id="@+id/riv_worker_list_photo"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/defaultimg" />
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:id="@+id/worker_list_nickname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/riv_worker_list_photo"
+        android:text="赵师傅" />
+
+    <RatingBar
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/worker_list_nickname_tv"
+        android:id="@+id/worker_list_ratingbar"
+        style="@style/MyRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="5" />
+    <View 
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cdcdcd"/>
+
+</RelativeLayout>

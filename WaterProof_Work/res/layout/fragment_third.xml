@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    android:orientation="vertical" >
+
+    <com.qingzu.uitest.view.MyTitleView
+        android:id="@+id/boss_third_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:center_text="我的订单"
+        app:left_vidibility="gone"
+        app:right_vidibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#ffffff" >
+
+        <ImageView
+            android:id="@+id/ft_iv_work_order"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/work_order" />
+
+        <TextView
+            android:id="@+id/ft_tv_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/ft_iv_work_order"
+            android:text="干活订单"
+            android:textColor="#3b3b3b"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/ft_iv_w_small_arrows"
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/small_arrows" />
+
+        <TextView
+            android:id="@+id/ft_tv_w_see_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ft_iv_w_small_arrows"
+            android:padding="10dp"
+            android:text="查看全部"
+            android:textColor="#3b3b3b"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#cdcdcd" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:id="@+id/ft_iv_wait_affirm"
+                android:layout_width="54dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/wait_affirm" />
+
+            <TextView
+                android:id="@+id/ft_iv_wait_affirm_counts_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/red_circle"
+                android:gravity="center"
+                android:text="8"
+                android:textColor="#ffffff"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:id="@+id/ft_iv_yet_affirm"
+                android:layout_width="54dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/yet_affirm" />
+
+            <TextView
+                android:id="@+id/ft_iv_yet_affirm_counts_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/red_circle"
+                android:gravity="center"
+                android:text="8"
+                android:textColor="#ffffff"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:id="@+id/ft_iv_underway"
+                android:layout_width="54dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/underway" />
+
+            <TextView
+                android:id="@+id/ft_iv_underway_counts_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/red_circle"
+                android:gravity="center"
+                android:text="8"
+                android:textColor="#ffffff"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:id="@+id/ft_iv_w_wait_evaluate"
+                android:layout_width="54dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/wait_evaluate" />
+
+            <TextView
+                android:id="@+id/ft_iv_w_wait_evaluate_counts_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/red_circle"
+                android:gravity="center"
+                android:text="8"
+                android:textColor="#ffffff"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff" >
+
+        <ImageView
+            android:id="@+id/ft_iv_mall_order"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/mall_order" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/ft_iv_mall_order"
+            android:text="商品订单"
+            android:textColor="#3b3b3b"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/ft_iv_m_small_arrows"
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/small_arrows" />
+
+        <TextView
+            android:id="@+id/ft_tv_m_see_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ft_iv_m_small_arrows"
+            android:padding="10dp"
+            android:text="查看全部"
+            android:textColor="#3b3b3b"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#cdcdcd" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:id="@+id/ft_iv_wait_pay"
+                android:layout_width="54dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/wait_pay" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:id="@+id/ft_iv_m_wait_evaluate"
+                android:layout_width="54dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/wait_deliver" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:id="@+id/ft_iv_wait_reception"
+                android:layout_width="54dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/wait_reception" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:id="@+id/ft_iv_wait_deliver"
+                android:layout_width="54dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/wait_evaluate" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

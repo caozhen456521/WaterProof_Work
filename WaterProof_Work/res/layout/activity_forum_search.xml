@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".ForumSearchActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#4ABFFD" >
+
+        <ImageView
+            android:id="@+id/fs_back_img"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/selector_title_back" />
+
+        <EditText
+            android:id="@+id/fs_find"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/fs_issue"
+            android:layout_toRightOf="@id/fs_back_img"
+            android:background="#6bcafc"
+            android:gravity="center_vertical"
+            android:hint="搜索问题"
+            android:paddingLeft="5dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@id/fs_issue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:text="清空"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fs_ll_tagview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="16.0dip"
+            android:text="历史搜索"
+            android:textColor="#ff999999"
+            android:textSize="16.0sp" />
+
+        <com.qingzu.uitest.view.TagListView
+            xmlns:f="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/tagview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="16.0dip"
+            f:horizontalSpacing="8dp"
+            f:orientation="horizontal"
+            f:verticalSpacing="6dp" />
+    </LinearLayout>
+
+    <com.qingzu.uitest.view.CustomListView
+        android:id="@+id/fs_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
+        android:background="#f5f5f5"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none"
+        android:visibility="gone" />
+</LinearLayout>

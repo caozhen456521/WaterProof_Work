@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_title_room"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_height"
+    android:background="@color/title_background_black" >
+
+    <RelativeLayout
+        android:id="@+id/my_title_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp" >
+
+        <Button
+            android:id="@+id/my_title_left_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:ellipsize="end"
+            android:maxEms="6"
+            android:singleLine="true"
+            android:textColor="@drawable/selector_button_font_white"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/my_title_left_img"
+            android:layout_width="12dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/my_title_left_title"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/my_title_center_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/my_title_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:maxEms="6"
+        android:singleLine="true"
+        android:textColor="@color/title_font_color"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/my_title_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:background="@null"
+        android:ellipsize="end"
+        android:maxEms="6"
+        android:singleLine="true"
+        android:textColor="@drawable/selector_button_font_white"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+</RelativeLayout>

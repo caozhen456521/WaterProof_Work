@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ltmc_room"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_my_custom" >
+
+    <ImageView
+        android:id="@+id/ltmc_iv_member_photo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/ltmc_tv_title"
+        android:layout_width="105dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/ltmc_iv_member_photo"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxEms="6"
+        android:paddingBottom="5dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="2dp"
+        android:paddingTop="5dp"
+        android:singleLine="true"
+        android:text="哈哈哈哈哈哈ahha "
+        android:textColor="#3b3b3b"
+        android:textSize="15sp" />
+
+    <RatingBar
+        android:id="@+id/ltmc_rb_evaluate"
+        style="@style/MyRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/ltmc_tv_title"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="3" />
+
+    <ImageView
+        android:id="@+id/ltmc_iv_delete_member"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/delete_member"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/ltmc_iv_move_group"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="6dp"
+        android:layout_toLeftOf="@id/ltmc_iv_delete_member"
+        android:src="@drawable/move_group"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/ltmc_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:visibility="gone" />
+    <Button 
+        android:id="@+id/ltmc_bt_chat"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/click_chat"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>
